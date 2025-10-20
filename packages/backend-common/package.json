@@ -1,0 +1,22 @@
+{
+  "name": "@repo/backend-common",
+  "version": "1.0.0",
+  "description": "Common backend utilities and configurations",
+  "main": "dist/config.js",
+  "types": "dist/config.d.ts",
+  "exports": {
+    "./config": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^24.8.1",
+    "typescript": "5.9.2"
+  },
+  "files": [
+    "dist"
+  ]
+}
