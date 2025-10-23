@@ -130,6 +130,21 @@ app.get("/chats/:roomId", async (req, res) => {
 
 })
 
+app.get("/chats/:slug", async (req, res) => {
+  const slug = req.params.slug;
+  const room =  prismaClient.room.findFirst({
+    where:{
+      slug
+    },
+  });
+
+
+  res.json({
+      room
+  })
+
+})
+
 app.listen(3001, () => {
   console.log('Server is running on port 3000');
 });
